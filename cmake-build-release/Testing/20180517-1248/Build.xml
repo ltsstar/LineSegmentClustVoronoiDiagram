@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Darwin-g++-7"
+	BuildStamp="20180517-1248-Continuous"
+	Name="Michels-MacBook-Air.local"
+	Generator="ctest-3.11.1"
+	CompilerName="/usr/local/Cellar/gcc/7.3.0_1/bin/g++-7"
+	CompilerVersion="7.3.0"
+	OSName="Mac OS X"
+	Hostname="Michels-MacBook-Air.local"
+	OSRelease="10.13.4"
+	OSVersion="17E202"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="61"
+	ProcessorCacheSize="32768"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="3072"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="1600"
+	>
+	<Build>
+		<StartDateTime>May 17 14:48 CEST</StartDateTime>
+		<StartBuildTime>1526561321</StartBuildTime>
+		<BuildCommand>/usr/local/Cellar/cmake/3.11.1/bin/cmake --build . --config "Release"</BuildCommand>
+		<Error>
+			<BuildLogLine>5</BuildLogLine>
+			<Text>/.../LineSegmentClusterVoronoiDiagram/PostgreSQLToBoostLoader.cpp:52:17: error: request for member 'push_back' in 'ssd', which is of pointer type 'SSD_POLYGON* {aka std::vector&lt;boost::polygon::segment_data&lt;int&gt; &gt;*}' (maybe you meant to use '-&gt;' ?)</Text>
+			<SourceFile>PostgreSQLToBoostLoader.cpp</SourceFile>
+			<SourceLineNumber>52</SourceLineNumber>
+			<PreContext>Scanning dependencies of target LineSegmentClusterVoronoiDiagram
+[ 20%] Building CXX object CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/PostgreSQLToBoostLoader.cpp.o
+[ 40%] Building CXX object CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/main.cpp.o
+/.../LineSegmentClusterVoronoiDiagram/PostgreSQLToBoostLoader.cpp: In member function 'void PostgreSQLToBoostLoader::loadLineSegments(SSD_POLYGON*)':
+</PreContext>
+			<PostContext>             ssd.push_back(SEGMENT_POLYGON(
+                 ^~~~~~~~~
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Error>
+		<Error>
+			<BuildLogLine>8</BuildLogLine>
+			<Text>make[6]: *** [CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/PostgreSQLToBoostLoader.cpp.o] Error 1</Text>
+			<PreContext></PreContext>
+			<PostContext>make[6]: *** Waiting for unfinished jobs....
+</PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Error>
+		<Error>
+			<BuildLogLine>10</BuildLogLine>
+			<Text>make[5]: *** [CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/all] Error 2</Text>
+			<PreContext></PreContext>
+			<PostContext></PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Error>
+		<Error>
+			<BuildLogLine>11</BuildLogLine>
+			<Text>make[4]: *** [all] Error 2</Text>
+			<PreContext></PreContext>
+			<PostContext></PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Error>
+		<Warning>
+			<BuildLogLine>1</BuildLogLine>
+			<Text>*** WARNING non-zero return value in ctest from: /usr/local/Cellar/cmake/3.11.1/bin/cmake</Text>
+			<PreContext></PreContext>
+			<PostContext></PostContext>
+			<RepeatCount>0</RepeatCount>
+		</Warning>
+		<Log Encoding="base64" Compression="bin/gzip"/>
+		<EndDateTime>May 17 14:49 CEST</EndDateTime>
+		<EndBuildTime>1526561358</EndBuildTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Build>
+</Site>

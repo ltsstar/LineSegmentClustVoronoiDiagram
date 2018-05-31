@@ -1,0 +1,9 @@
+Upload files:
+0	Build.xml
+1	Configure.xml
+2	Test.xml
+Using drop method: http
+	Upload file: /Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/Testing/20180517-1248/Build.xml to Michels-MacBook-Air.local___Darwin-g++-7___20180517-1248-Continuous___XML___Build.xml
+   Error when uploading file: /Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/Testing/20180517-1248/Build.xml
+   Error message was: Bad URL
+   Problems when submitting via HTTP

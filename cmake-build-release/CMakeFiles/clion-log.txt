@@ -1,0 +1,34 @@
+/usr/local/Cellar/cmake/3.11.1/bin/cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_COMPILER=/usr/local/Cellar/gcc/7.3.0_1/bin/g++-7 -G "CodeBlocks - Unix Makefiles" /Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram
+-- __cplusplus is 201703
+--   --> Do not link with Boost.Thread
+-- Boost version: 1.67.0
+-- Boost include dirs: /usr/local/include
+-- Boost libraries:    
+-- Build type: Release
+-- USING CXXFLAGS = ' -O3 -DNDEBUG'
+-- USING EXEFLAGS = ' '
+-- Targetting Unix Makefiles
+-- Using /usr/local/Cellar/gcc/7.3.0_1/bin/g++-7 compiler.
+-- DARWIN_VERSION=17
+-- Mac Leopard detected
+-- Requested component: Core
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   thread
+--   system
+--   chrono
+--   date_time
+--   atomic
+-- Requested component: MPFR
+-- Requested component: GMP
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   thread
+--   timer
+--   chrono
+--   system
+--   date_time
+--   atomic
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release

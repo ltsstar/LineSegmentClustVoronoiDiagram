@@ -1,0 +1,11 @@
+Scanning dependencies of target LineSegmentClusterVoronoiDiagram
+[ 50%] Building CXX object CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/PostgreSQLToBoostLoader.cpp.o
+[ 50%] Building CXX object CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/PostgreSQLToBoostLoader.cpp.o
+/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/PostgreSQLToBoostLoader.cpp: In member function 'void PostgreSQLToBoostLoader::loadLineSegments(SSD_POLYGON*)':
+/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/PostgreSQLToBoostLoader.cpp:52:17: error: request for member 'push_back' in 'ssd', which is of pointer type 'SSD_POLYGON* {aka std::vector<boost::polygon::segment_data<int> >*}' (maybe you meant to use '->' ?)
+             ssd.push_back(SEGMENT_POLYGON(
+                 ^~~~~~~~~
+make[6]: *** [CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/PostgreSQLToBoostLoader.cpp.o] Error 1
+make[6]: *** Waiting for unfinished jobs....
+make[5]: *** [CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/all] Error 2
+make[4]: *** [all] Error 2

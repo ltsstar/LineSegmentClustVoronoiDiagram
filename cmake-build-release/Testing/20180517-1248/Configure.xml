@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Darwin-g++-7"
+	BuildStamp="20180517-1248-Continuous"
+	Name="Michels-MacBook-Air.local"
+	Generator="ctest-3.11.1"
+	CompilerName="/usr/local/Cellar/gcc/7.3.0_1/bin/g++-7"
+	CompilerVersion="7.3.0"
+	OSName="Mac OS X"
+	Hostname="Michels-MacBook-Air.local"
+	OSRelease="10.13.4"
+	OSVersion="17E202"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="61"
+	ProcessorCacheSize="32768"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="2048"
+	TotalPhysicalMemory="8192"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="1600"
+	>
+	<Configure>
+		<StartDateTime>May 17 14:48 CEST</StartDateTime>
+		<StartConfigureTime>1526561318</StartConfigureTime>
+		<ConfigureCommand>"/usr/local/Cellar/cmake/3.11.1/bin/cmake" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram"</ConfigureCommand>
+		<Log>-- __cplusplus is 201703
+--   --&gt; Do not link with Boost.Thread
+-- Boost version: 1.67.0
+-- Boost include dirs: /usr/local/include
+-- Boost libraries:    
+-- Build type: Release
+-- USING CXXFLAGS = ' -O3 -DNDEBUG'
+-- USING EXEFLAGS = ' '
+-- Targetting Unix Makefiles
+-- Using /usr/local/Cellar/gcc/7.3.0_1/bin/g++-7 compiler.
+-- DARWIN_VERSION=17
+-- Mac Leopard detected
+-- Requested component: Core
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   thread
+--   system
+--   chrono
+--   date_time
+--   atomic
+-- Requested component: MPFR
+-- Requested component: GMP
+-- Boost version: 1.67.0
+-- Found the following Boost libraries:
+--   thread
+--   timer
+--   chrono
+--   system
+--   date_time
+--   atomic
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release
+</Log>
+		<ConfigureStatus>0</ConfigureStatus>
+		<EndDateTime>May 17 14:48 CEST</EndDateTime>
+		<EndConfigureTime>1526561321</EndConfigureTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Configure>
+</Site>
