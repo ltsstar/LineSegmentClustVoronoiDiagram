@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/BoostToPostgreSQLSaverTest.cpp.o"
   "CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/Grid.cpp.o"
   "CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/GridTest.cpp.o"
+  "CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/SimpleTest.cpp.o"
   "LineSegmentClusterVoronoiDiagram.pdb"
   "LineSegmentClusterVoronoiDiagram"
 )

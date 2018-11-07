@@ -186,6 +186,9 @@
 		<Unit filename="/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/PostgreSQLToBoostLoader.cpp">
 			<Option target="LineSegmentClusterVoronoiDiagram"/>
 		</Unit>
+		<Unit filename="/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/SimpleTest.cpp">
+			<Option target="LineSegmentClusterVoronoiDiagram"/>
+		</Unit>
 		<Unit filename="/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/main.cpp">
 			<Option target="LineSegmentClusterVoronoiDiagram"/>
 		</Unit>

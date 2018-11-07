@@ -15,7 +15,7 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIR})
 
 add_executable(LineSegmentClusterVoronoiDiagram #main.cpp
-        PostgreSQLToBoostLoader.cpp PostgreSQLToBoostLoader.h tests/main.cpp tests/PostgreSQLToBoostLoader.cpp BoostVoronoiDiagram.cpp BoostVoronoiDiagram.h tests/BoostVoronoiDiagramTest.cpp BoostToPostgreSQLSaver.cpp BoostToPostgreSQLSaver.h voronoi_visual_utils.h BoostVoronoiVisualizer.cpp BoostVoronoiVisualizer.h tests/BoostToPostgreSQLSaverTest.cpp Grid.cpp Grid.h tests/GridTest.cpp)
+        PostgreSQLToBoostLoader.cpp PostgreSQLToBoostLoader.h tests/main.cpp tests/PostgreSQLToBoostLoader.cpp BoostVoronoiDiagram.cpp BoostVoronoiDiagram.h tests/BoostVoronoiDiagramTest.cpp BoostToPostgreSQLSaver.cpp BoostToPostgreSQLSaver.h voronoi_visual_utils.h BoostVoronoiVisualizer.cpp BoostVoronoiVisualizer.h tests/BoostToPostgreSQLSaverTest.cpp Grid.cpp Grid.h tests/GridTest.cpp tests/SimpleTest.cpp)
 
 target_include_directories(LineSegmentClusterVoronoiDiagram PUBLIC ${Boost_INCLUDE_DIRS})
 target_link_libraries( LineSegmentClusterVoronoiDiagram PUBLIC ${Boost_LIBRARIES} ${CGAL_LIBRARIES})

@@ -741,6 +741,33 @@ tests/PostgreSQLToBoostLoader.cpp.s:
 	$(MAKE) -f CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/build.make CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/PostgreSQLToBoostLoader.cpp.s
 .PHONY : tests/PostgreSQLToBoostLoader.cpp.s
 
+tests/SimpleTest.o: tests/SimpleTest.cpp.o
+
+.PHONY : tests/SimpleTest.o
+
+# target to build an object file
+tests/SimpleTest.cpp.o:
+	$(MAKE) -f CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/build.make CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/SimpleTest.cpp.o
+.PHONY : tests/SimpleTest.cpp.o
+
+tests/SimpleTest.i: tests/SimpleTest.cpp.i
+
+.PHONY : tests/SimpleTest.i
+
+# target to preprocess a source file
+tests/SimpleTest.cpp.i:
+	$(MAKE) -f CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/build.make CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/SimpleTest.cpp.i
+.PHONY : tests/SimpleTest.cpp.i
+
+tests/SimpleTest.s: tests/SimpleTest.cpp.s
+
+.PHONY : tests/SimpleTest.s
+
+# target to generate assembly for a file
+tests/SimpleTest.cpp.s:
+	$(MAKE) -f CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/build.make CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/SimpleTest.cpp.s
+.PHONY : tests/SimpleTest.cpp.s
+
 tests/main.o: tests/main.cpp.o
 
 .PHONY : tests/main.o
@@ -833,6 +860,9 @@ help:
 	@echo "... tests/PostgreSQLToBoostLoader.o"
 	@echo "... tests/PostgreSQLToBoostLoader.i"
 	@echo "... tests/PostgreSQLToBoostLoader.s"
+	@echo "... tests/SimpleTest.o"
+	@echo "... tests/SimpleTest.i"
+	@echo "... tests/SimpleTest.s"
 	@echo "... tests/main.o"
 	@echo "... tests/main.i"
 	@echo "... tests/main.s"

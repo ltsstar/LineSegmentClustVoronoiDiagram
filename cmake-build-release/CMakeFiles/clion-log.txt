@@ -9,7 +9,7 @@
 -- USING EXEFLAGS = ' '
 -- Targetting Unix Makefiles
 -- Using /usr/local/Cellar/gcc/7.3.0_1/bin/g++-7 compiler.
--- DARWIN_VERSION=17
+-- DARWIN_VERSION=18
 -- Mac Leopard detected
 -- Requested component: Core
 -- Boost version: 1.67.0

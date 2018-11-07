@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/BoostVoronoiDiagramTest.cpp" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/BoostVoronoiDiagramTest.cpp.o"
   "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/GridTest.cpp" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/GridTest.cpp.o"
   "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/PostgreSQLToBoostLoader.cpp" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/PostgreSQLToBoostLoader.cpp.o"
+  "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/SimpleTest.cpp" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/SimpleTest.cpp.o"
   "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/tests/main.cpp" "/Users/michel/CLionProjects/LineSegmentClusterVoronoiDiagram/cmake-build-release/CMakeFiles/LineSegmentClusterVoronoiDiagram.dir/tests/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
