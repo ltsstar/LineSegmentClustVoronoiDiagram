@@ -5,7 +5,7 @@
 #include "PostgreSQLToBoostLoader.h"
 
 
-std::string PostgreSQLToBoostLoader::db_name = "gis_denmark";
+std::string PostgreSQLToBoostLoader::db_name = "gis_artificial";
 std::string PostgreSQLToBoostLoader::user_name = "michel";
 
 
@@ -33,7 +33,8 @@ void PostgreSQLToBoostLoader::loadLineSegments(LineSegmentVector *lsv) {
 
     PGresult *res;
     if (!PQsendQuery(conn,
-                     "select osm_id, sub_id, class, st_astext(st_transform(line, 4326)) from dijkstra_lines"))
+                     "select osm_id, sub_id, class, st_astext(st_transform(line, 4326)) from dijkstra_lines "
+                     "where class != 0"))
     {
         fprintf(stderr, "Send query failed: %s", PQerrorMessage(conn));
         PQfinish(conn);

@@ -60,28 +60,36 @@ private:
     typedef std::vector<GridLocation> GridLocationList;
     typedef std::vector<Square*> SquareList;
     typedef std::vector<std::vector<Square>> GridMatrix;
+    typedef boost::polygon::point_data<double> POINT;
+
     GridMatrix grid;
     LineSegmentVector *lsv;
     LineSegmentVector *lsv_non_grid;
 
     GridLocation findGridLocation(IntCoordinate int_coordinate);
-    GridLocation findGridLocation(LineSegment * line_segment);
+    GridLocation findGridLocation(POINT point);
+    void findAllGridLocations(LineSegment *line_segment, GridLocationList * result);
     GridLocationList findGridLocations(LineSegment * line_segment);
     bool isInOneSquare(LineSegment * line_segment);
     bool isCleanable(GridLocation square_location);
     Square * getSquare(GridLocation grid_location);
 
 public:
-    const std::pair<double, double> extend_x = std::pair<double, double>(-180, 180);
-    const std::pair<double, double> extend_y = std::pair<double, double>(-90, 90);
+    std::pair<double, double> extend_x;
+    std::pair<double, double> extend_y;
+    int grid_x;
+    int grid_y;
 
-    const double square_size = 0.01;
+    double square_size;
 
     void sortIntoGrid();
     void cleanSegments();
     void saveTo(LineSegmentVector *new_lsv);
 
-    explicit Grid(LineSegmentVector *lsv);
+    explicit Grid(LineSegmentVector *lsv,
+                  std::pair<double, double> extend_x,
+                  std::pair<double, double> extend_y,
+                  double square_size);
     ~Grid();
 };
 

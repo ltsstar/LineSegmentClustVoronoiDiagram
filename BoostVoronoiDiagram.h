@@ -15,6 +15,8 @@ public:
 
     void create(LineSegmentVector *lsv);
     void cleanSegmentSet(LineSegmentVector *lsv);
+
+    virtual ~BoostVoronoiDiagram();
 };
 
 

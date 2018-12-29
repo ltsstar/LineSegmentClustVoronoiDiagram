@@ -50,5 +50,12 @@ void BoostVoronoiDiagram::create(LineSegmentVector *lsv) {
     for(auto ls = lsv->begin(); ls != lsv->end(); ++ls) {
         ssd.push_back(ls->line_segment_data);
     }
+
     boost::polygon::construct_voronoi(ssd.begin(), ssd.end(), &vd);
+
+    ssd.clear();
+}
+
+BoostVoronoiDiagram::~BoostVoronoiDiagram() {
+    //delete vd;
 }

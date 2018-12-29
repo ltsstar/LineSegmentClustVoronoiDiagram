@@ -10,6 +10,7 @@
 #include "boost/polygon/voronoi.hpp"
 #include "BoostVoronoiVisualizer.h"
 #include "tests/catch.hpp"
+#include <sstream>
 
 using boost::polygon::voronoi_builder;
 using boost::polygon::voronoi_diagram;
@@ -17,7 +18,7 @@ using boost::polygon::voronoi_edge;
 using boost::polygon::point_data;
 using boost::polygon::segment_data;
 
-std::string BoostToPostgreSQLSaver::db_name = "gis_liechtenstein";
+std::string BoostToPostgreSQLSaver::db_name = "gis_artificial";
 std::string BoostToPostgreSQLSaver::user_name = "michel";
 
 BoostToPostgreSQLSaver::BoostToPostgreSQLSaver() {
@@ -43,12 +44,13 @@ double BoostToPostgreSQLSaver::intToWgs(int32_t wgs) {
 
 void BoostToPostgreSQLSaver::saveVoronoiDiagram(LineSegmentVector *lsv, VoronoiDiagramBoost *vd) {
     std::vector<LineSegmentData> ssd = std::vector<LineSegmentData>();
-    for(auto line_segment = lsv->begin(); line_segment != lsv->end(); ++lsv) {
-        ssd.emplace_back(line_segment->line_segment_data);
+    for(auto line_segment = lsv->begin(); line_segment != lsv->end(); ++line_segment) {
+        LineSegmentData lsdata = line_segment->line_segment_data;
+        ssd.push_back(lsdata);
     }
     BoostVoronoiVisualizer boostVoronoiVisualizer(ssd);
     int64_t i = 0;
-    for (voronoi_diagram<double>::const_cell_iterator it = vd->cells().begin();
+    for (auto it = vd->cells().begin();
             it != vd->cells().end();
             ++it) {
         if(it->incident_edge() == nullptr)
@@ -59,7 +61,7 @@ void BoostToPostgreSQLSaver::saveVoronoiDiagram(LineSegmentVector *lsv, VoronoiD
         query << i << ", 0, 0, ";
         query << "ST_MakePolygon(ST_GeomFromText('LINESTRING(";
 
-        const voronoi_edge<double> *edge = it->incident_edge();
+        voronoi_edge<double> *edge = it->incident_edge();
         do {
             std::string edge_string;
             if(edge->is_finite()) {
@@ -84,7 +86,7 @@ void BoostToPostgreSQLSaver::saveVoronoiDiagram(LineSegmentVector *lsv, VoronoiD
             }
             edge = edge->next();
             // Do smth. with edge.
-        } while (edge != it->incident_edge());
+        } while (edge != it->incident_edge() && edge != nullptr);
         std::string query_str = query.str();
         query_str.pop_back();
         query_str.pop_back();
