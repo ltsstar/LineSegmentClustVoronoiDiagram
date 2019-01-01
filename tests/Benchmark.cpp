@@ -11,7 +11,7 @@
 TEST_CASE("Benchmark", "[Benchmark]") {
   SECTION( "Benchmark" ) {
     int iterations = 1;
-    int square_size_double_min = 100;
+    int square_size_double_min = 2;
     int square_size_double_dec = 2;
 
     PostgreSQLToBoostLoader postgreSQLToBoostLoader;
@@ -26,14 +26,14 @@ TEST_CASE("Benchmark", "[Benchmark]") {
     std::cout << "Line segments before grid: " << lsv.size() << std::endl;
 
 
-    std::map<int, std::vector<std::tuple<double, int, double>>> results;
+    std::map<int, std::vector<std::tuple<double, int, double, double>>> results;
     for(int i = 0; i < iterations; ++i) {
       for (int square_size_double = 100; square_size_double >= square_size_double_min;
            square_size_double -= square_size_double_dec) {
 
         if(i == 0) {
           results[square_size_double] = std::vector<
-                  std::tuple<double, int, double>>();
+                  std::tuple<double, int, double, double>>();
         }
 
         auto start = std::chrono::system_clock::now();
@@ -56,13 +56,16 @@ TEST_CASE("Benchmark", "[Benchmark]") {
 
         end = std::chrono::system_clock::now();
         std::chrono::duration<double> diff2 = end-start;
+        start = std::chrono::system_clock::now();
 
-        VoronoiMerger voronoiMerger;
-        voronoiMerger.merge(&cleaned_lsv, &boostVoronoiDiagram.vd);
 
+        VoronoiMerger::merge(&cleaned_lsv, &boostVoronoiDiagram.vd);
+
+        end = std::chrono::system_clock::now();
+        std::chrono::duration<double> diff3 = end-start;
 
         results[square_size_double].push_back(
-                std::make_tuple(diff1.count(), cleaned_lsv.size(), diff2.count())
+                std::make_tuple(diff1.count(), cleaned_lsv.size(), diff2.count(), diff3.count())
         );
       }
     }
@@ -76,6 +79,10 @@ TEST_CASE("Benchmark", "[Benchmark]") {
       std::cout << std::endl << "########################" << std::endl;
       for(int i = 0; i < iterations; ++i) {
         std::cout << std::get<2>(results[square_size_double][i]) << ", ";
+      }
+      std::cout << std::endl << "########################" << std::endl;
+      for(int i = 0; i < iterations; ++i) {
+        std::cout << std::get<3>(results[square_size_double][i]) << ", ";
       }
       std::cout << std::endl << "########################" << std::endl;
       for(int i = 0; i < iterations; ++i) {

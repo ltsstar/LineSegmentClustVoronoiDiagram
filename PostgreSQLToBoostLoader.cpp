@@ -5,7 +5,7 @@
 #include "PostgreSQLToBoostLoader.h"
 
 
-std::string PostgreSQLToBoostLoader::db_name = "gis_artificial";
+std::string PostgreSQLToBoostLoader::db_name = "gis_denmark";
 std::string PostgreSQLToBoostLoader::user_name = "michel";
 
 
